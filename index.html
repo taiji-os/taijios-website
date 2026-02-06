@@ -94,20 +94,19 @@
         </div>
         <p>Building a distributed interface in TaijiOS is now as simple as defining a block:</p>
         
-        <div class="code-block" style="background: #191919; color: #FFFFFF; border: 2px solid #404080;">
-<span style="color: #808080;">// Kryon Easy UI Example</span>
-Window {
-    title = "Mesh Controller"
-    width = 600; bg = "#191919"
-    
-    Center {
-        Button {
-            text = "Connect to Hive"
-            fg = "pink"; bg = "#404080"
-            onClick = start_mesh_auth
+        <div class="code-block" style="background: #191919; border: 2px solid #404080;"><pre style="margin: 0;"><span style="color: #808080;">// Kryon Easy UI Example</span>
+<span style="color: #FF79C6;">Window</span> {
+    <span style="color: #50FA7B;">title</span> = <span style="color: #F1FA8C;">"Mesh Controller"</span>
+    <span style="color: #50FA7B;">width</span> = <span style="color: #BD93F9;">600</span>; <span style="color: #50FA7B;">bg</span> = <span style="color: #F1FA8C;">"#191919"</span>
+
+    <span style="color: #FF79C6;">Center</span> {
+        <span style="color: #FF79C6;">Button</span> {
+            <span style="color: #50FA7B;">text</span> = <span style="color: #F1FA8C;">"Connect to Hive"</span>
+            <span style="color: #50FA7B;">fg</span> = <span style="color: #F1FA8C;">"pink"</span>; <span style="color: #50FA7B;">bg</span> = <span style="color: #F1FA8C;">"#404080"</span>
+            <span style="color: #50FA7B;">onClick</span> = <span style="color: #8BE9FD;">start_mesh_auth</span>
         }
     }
-}
+}</pre>
         </div>
         <p align="center">Learn more at <a href="https://kryonlabs.com">KryonLabs.com</a></p>
     </section>
@@ -124,15 +123,15 @@ Window {
 
     <section id="quickstart">
         <h2>Quick Start (NixOS)</h2>
-        <div class="code-block"><pre style="margin: 0;"><span style="color: #808080;"># Clone the repository</span>
-<span style="color: #00FF00;">git</span> clone https://github.com/taiji-os/TaijiOS.git
-<span style="color: #00FF00;">cd</span> TaijiOS
+        <div class="code-block"><pre style="margin: 0;"><span style="color: #6272A4;"># Clone the repository</span>
+<span style="color: #FF79C6;">git</span> clone <span style="color: #F1FA8C;">https://github.com/taiji-os/TaijiOS.git</span>
+<span style="color: #FF79C6;">cd</span> <span style="color: #8BE9FD;">TaijiOS</span>
 
-<span style="color: #808080;"># Enter the build shell</span>
-<span style="color: #00FF00;">nix-shell</span>
+<span style="color: #6272A4;"># Enter the build shell</span>
+<span style="color: #FF79C6;">nix-shell</span>
 
-<span style="color: #808080;"># Build and materialize the WM</span>
-<span style="color: #87CEFA;">./run-wm.sh</span></pre>
+<span style="color: #6272A4;"># Build and materialize the WM</span>
+<span style="color: #8BE9FD;">./run-wm.sh</span></pre>
         </div>
     </section>
 
