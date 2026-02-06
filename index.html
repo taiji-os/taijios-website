@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TaijiOS - Distributed Computing for the Modern Era</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background: #C0C0C0;
+            color: #000000;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.2;
+        }
+        a { color: #0000EE; text-decoration: underline; }
+        a:visited { color: #551A8B; }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            border: 2px solid #808080;
+            background: #C0C0C0;
+            box-shadow: 4px 4px 0px #404040;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            border-bottom: 2px solid #808080;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+        }
+
+        h1 { margin: 0; font-size: 2.8em; letter-spacing: 3px; }
+        h2 { background: #000080; color: white; padding: 5px; font-size: 1.2em; margin-top: 25px; }
+        
+        .nav { text-align: center; margin-bottom: 20px; font-weight: bold; font-size: 0.9em; }
+        
+        .code-block {
+            background: #000000;
+            color: #00FF00;
+            padding: 15px;
+            border: 2px inset #808080;
+            font-size: 14px;
+            overflow-x: auto;
+            margin: 10px 0;
+        }
+        .code-block pre {
+            margin: 0;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .highlight-box {
+            background: #FFFFE0;
+            border: 1px dashed #800000;
+            padding: 15px;
+            margin: 15px 0;
+        }
+
+        .footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 0.8em;
+            border-top: 1px solid #808080;
+            padding-top: 10px;
+        }
+        
+        .tagline { color: #800000; font-weight: bold; margin-top: 5px; }
+        .version { font-size: 0.7em; color: #404040; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>🌀 TAIJIOS</h1>
+        <div class="tagline">DISTRIBUTED COMPUTING FOR THE MODERN ERA</div>
+        <div class="version">v1.0.8 // FORK OF INFERNO®</div>
+    </header>
+
+    <div class="nav">
+        [ <a href="#about">ABOUT</a> ] [ <a href="#features">CORE FEATURES</a> ] [ <a href="#kryon">EASY UI (KRYON)</a> ] [ <a href="#quickstart">QUICK START</a> ] [ <a href="https://github.com/taiji-os/TaijiOS">GITHUB</a> ]
+    </div>
+
+    <section id="about">
+        <h2>What is TaijiOS?</h2>
+        <p>TaijiOS is a modern fork of <b>Inferno® Distributed Operating System</b> (originally developed at Bell Labs). It brings powerful distributed computing capabilities to modern systems with updated build tools, C11 compliance, and 9front driver integration.</p>
+    </section>
+
+    <section id="kryon">
+        <h2>Modern UI via KRYON</h2>
+        <div class="highlight-box">
+            <b>Note:</b> We use <a href="https://kryonlabs.com">KRYON</a> as the primary standard for building interfaces. Kryon simplifies the complexity of Limbo/Tk into a declarative, modern syntax that talks directly to the 9P mesh.
+        </div>
+        <p>Building a distributed interface in TaijiOS is now as simple as defining a block:</p>
+        
+        <div class="code-block" style="background: #191919; color: #FFFFFF; border: 2px solid #404080;">
+<span style="color: #808080;">// Kryon Easy UI Example</span>
+Window {
+    title = "Mesh Controller"
+    width = 600; bg = "#191919"
+    
+    Center {
+        Button {
+            text = "Connect to Hive"
+            fg = "pink"; bg = "#404080"
+            onClick = start_mesh_auth
+        }
+    }
+}
+        </div>
+        <p align="center">Learn more at <a href="https://kryonlabs.com">KryonLabs.com</a></p>
+    </section>
+
+    <section id="features">
+        <h2>Technical Specification</h2>
+        <ul>
+            <li><b>Limbo VM:</b> Portable Dis bytecode runs on native hardware or hosted (Linux/BSD/macOS).</li>
+            <li><b>9P Mesh:</b> Every resource (CPU, file, device) is shared via the Styx protocol.</li>
+            <li><b>C11 Compliant:</b> Built with modern GCC/Clang on 9front/Plan9/NixOS.</li>
+            <li><b>Reproducible:</b> First-class NixOS integration for guaranteed build states.</li>
+        </ul>
+    </section>
+
+    <section id="quickstart">
+        <h2>Quick Start (NixOS)</h2>
+        <div class="code-block"><pre style="margin: 0;"><span style="color: #808080;"># Clone the repository</span>
+<span style="color: #00FF00;">git</span> clone https://github.com/taiji-os/TaijiOS.git
+<span style="color: #00FF00;">cd</span> TaijiOS
+
+<span style="color: #808080;"># Enter the build shell</span>
+<span style="color: #00FF00;">nix-shell</span>
+
+<span style="color: #808080;"># Build and materialize the WM</span>
+<span style="color: #87CEFA;">./run-wm.sh</span></pre>
+        </div>
+    </section>
+
+    <div class="footer">
+        TAIJIOS.NET // EST. 2026 // EVERYTHING IS A FILE
+    </div>
+</div>
+
+</body>
+</html>
