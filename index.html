@@ -187,26 +187,25 @@
 
     <section id="about">
         <h2>What is TaijiOS?</h2>
-        <p>TaijiOS is a modern fork of <b>Inferno® Distributed Operating System</b> (originally developed at Bell Labs). It brings powerful distributed computing capabilities to modern systems with updated build tools, C11 compliance, and 9front driver integration.</p>
+        <p>TaijiOS is a modern fork of <b>Inferno® Distributed Operating System</b> (originally developed at Bell Labs). It brings powerful distributed computing capabilities to modern systems with updated build tools and 9front driver integration.</p>
     </section>
 
     <section id="kryon">
         <h2>Modern UI via KRYON</h2>
         <div class="highlight-box">
-            <b>Note:</b> We use <a href="https://kryonlabs.com">KRYON</a> as the primary standard for building interfaces. Kryon simplifies the complexity of Limbo/Tk into a declarative, modern syntax that talks directly to the 9P mesh.
+            <b>Note:</b> We use <a href="https://kryonlabs.com">KRYON</a> as the primary standard for building interfaces. Kryon simplifies the complexity of Limbo/Tk into a declarative, modern syntax that talks directly to 9P.
         </div>
         <p>Building a distributed interface in TaijiOS is now as simple as defining a block:</p>
         
         <div class="code-block" style="background: #191919; border: 2px solid #404080;"><pre style="margin: 0;"><span style="color: #808080;">// Kryon Easy UI Example</span>
 <span style="color: #FF79C6;">Window</span> {
-    <span style="color: #50FA7B;">title</span> = <span style="color: #F1FA8C;">"Mesh Controller"</span>
-    <span style="color: #50FA7B;">width</span> = <span style="color: #BD93F9;">600</span>; <span style="color: #50FA7B;">bg</span> = <span style="color: #F1FA8C;">"#191919"</span>
+    <span style="color: #50FA7B;">title</span> = <span style="color: #F1FA8C;">"Hello"</span>
+    <span style="color: #50FA7B;">width</span> = <span style="color: #BD93F9;">200</span>
 
     <span style="color: #FF79C6;">Center</span> {
         <span style="color: #FF79C6;">Button</span> {
-            <span style="color: #50FA7B;">text</span> = <span style="color: #F1FA8C;">"Connect to Hive"</span>
-            <span style="color: #50FA7B;">fg</span> = <span style="color: #F1FA8C;">"pink"</span>; <span style="color: #50FA7B;">bg</span> = <span style="color: #F1FA8C;">"#404080"</span>
-            <span style="color: #50FA7B;">onClick</span> = <span style="color: #8BE9FD;">start_mesh_auth</span>
+            <span style="color: #50FA7B;">text</span> = <span style="color: #F1FA8C;">"Click Me"</span>
+            <span style="color: #50FA7B;">onClick</span> = <span style="color: #8BE9FD;">say_hello</span>
         }
     }
 }</pre>
@@ -218,8 +217,7 @@
         <h2>Technical Specification</h2>
         <ul>
             <li><b>Limbo VM:</b> Portable Dis bytecode runs on native hardware or hosted (Linux/BSD/macOS).</li>
-            <li><b>9P Mesh:</b> Every resource (CPU, file, device) is shared via the Styx protocol.</li>
-            <li><b>C11 Compliant:</b> Built with modern GCC/Clang on 9front/Plan9/NixOS.</li>
+            <li><b>9P:</b> Every resource (CPU, file, device) is shared via the Styx protocol.</li>
             <li><b>Reproducible:</b> First-class NixOS integration for guaranteed build states.</li>
         </ul>
     </section>
